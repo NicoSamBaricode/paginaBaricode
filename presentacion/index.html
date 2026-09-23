@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PataApp - Pitch Deck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(17, 24, 39, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --primary-grad: linear-gradient(135deg, #3b82f6, #60a5fa);
+      --secondary: #10b981;
+      --secondary-grad: linear-gradient(135deg, #10b981, #34d399);
+      --accent: #f59e0b;
+      --accent-grad: linear-gradient(135deg, #f59e0b, #fbbf24);
+      --text-white: #f3f4f6;
+      --text-gray: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* Slides container */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: scale(0.98) translateY(10px);
+      padding: 4% 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+      z-index: 10;
+    }
+
+    /* Global Typography */
+    h1, h2, h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+    }
+
+    .grad-text {
+      background: var(--primary-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grad-text-sec {
+      background: var(--secondary-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grad-text-acc {
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Layout Components */
+    .slide-title {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-cols: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-cols: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    /* Card styling */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.2rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .glass-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .glass-card p, .glass-card li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-gray);
+    }
+
+    .glass-card ul {
+      list-style-type: none;
+    }
+
+    .glass-card li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .glass-card li::before {
+      content: "🐾";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 0.9rem;
+    }
+
+    /* Buttons / Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.2rem;
+    }
+
+    .badge-blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .badge-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-accent { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    /* Navigation Controls */
+    .controls {
+      position: absolute;
+      bottom: 2rem;
+      right: 3rem;
+      display: flex;
+      gap: 1rem;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .progress-bar-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 100;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--primary-grad);
+      transition: width 0.3s ease;
+    }
+
+    /* Slide specific designs */
+    /* Slide 1: Welcome */
+    .hero-slide {
+      text-align: center;
+      align-items: center;
+    }
+    .hero-slide h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    .hero-slide p {
+      font-size: 1.5rem;
+      color: var(--text-gray);
+      max-w: 600px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-slide .logo-icon {
+      font-size: 6.5rem;
+      margin-bottom: 1.5rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* Big Stats */
+    .stat-number {
+      font-size: 4rem;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .demo-step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .step-number {
+      background: var(--primary-grad);
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+      font-family: 'Outfit';
+    }
+    .demo-container {
+      display: grid;
+      grid-template-cols: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+      height: 70vh;
+    }
+    .video-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      background: #000;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .subtitles-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .subtitles-box::-webkit-scrollbar {
+      width: 6px;
+    }
+    .subtitles-box::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    .subtitle-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.3s;
+    }
+    .subtitle-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .subtitle-time {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      background: rgba(59, 130, 246, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .subtitle-text h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: white;
+    }
+    .subtitle-text p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+
+    <!-- Slide 1: Welcome Hero -->
+    <div class="slide active hero-slide">
+      <div class="logo-icon">🐾</div>
+      <span class="badge badge-blue">PataApp 2026</span>
+      <h1>PataApp</h1>
+      <p>La revolución digital en la gestión de fauna urbana y salud pública.</p>
+      <div class="glass-card" style="padding: 1.2rem 2.5rem; border-radius: 99px;">
+        <span style="color: var(--text-gray); font-size: 0.95rem;">Presentación Interactiva para Inversores y Aliados</span>
+      </div>
+    </div>
+
+    <!-- Slide 2: El Problema -->
+    <div class="slide">
+      <span class="badge badge-accent">El Escenario Actual</span>
+      <h2 class="slide-title">El Problema de la Fauna Urbana</h2>
+      <div class="grid-2">
+        <div class="space-y-6">
+          <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Las ciudades de hoy enfrentan un problema crítico y fragmentado en la gestión de animales de la calle y zoonosis.
+          </p>
+          <div class="glass-card" style="margin-bottom: 1.5rem;">
+            <h3>⚠️ Desconexión Operativa</h3>
+            <p>El ciudadano reporta, el municipio carece de trazabilidad y los refugios están sobrepasados administrativamente sin herramientas digitales modernas.</p>
+          </div>
+        </div>
+        <div class="grid-2 gap-4">
+          <div class="glass-card text-center">
+            <div class="stat-number grad-text-acc">+6M</div>
+            <p>Animales callejeros sin control sanitario en la región</p>
+          </div>
+          <div class="glass-card text-center">
+            <div class="stat-number grad-text-acc">85%</div>
+            <p>De los registros sanitarios se siguen haciendo en cuadernos manuales</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: La Solución -->
+    <div class="slide">
+      <span class="badge badge-green">Nuestra Propuesta</span>
+      <h2 class="slide-title">PataApp: Gestión Inteligente y Conectada</h2>
+      <div class="grid-3">
+        <div class="glass-card">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🚨</span>
+          <h3>Ciudadanía Activa</h3>
+          <p>Mapeo colectivo geolocalizado en tiempo real. Cualquier ciudadano avista un animal, sube una foto y reporta al instante.</p>
+        </div>
+        <div class="glass-card">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🏛️</span>
+          <h3>Municipio Digital</h3>
+          <p>Panel de control para monitorear zoonosis, ver reportes en tiempo real y derivar el rescate de forma inteligente a entidades locales.</p>
+        </div>
+        <div class="glass-card">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🏠</span>
+          <h3>Refugios Optimizados</h3>
+          <p>Bandeja de entrada de rescates automatizada. Gestión de animales, historial de salud y captación de fondos en un solo software.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Demo Ciudadano -->
+    <div class="slide">
+      <span class="badge badge-blue">Demostración en Vivo</span>
+      <h2 class="slide-title">Experiencia del Ciudadano (Citizen)</h2>
+      <div class="demo-container">
+        <div class="video-wrapper">
+          <img src="./citizen_demo_1783603741831.webp" alt="Citizen Demo Recording" />
+        </div>
+        <div class="subtitles-box">
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:00</span>
+            <div class="subtitle-text">
+              <h4>Acceso de Usuario</h4>
+              <p>El ciudadano inicia sesión con su cuenta asignada para poder interactuar.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:05</span>
+            <div class="subtitle-text">
+              <h4>Catálogo de Adopciones</h4>
+              <p>Navega a la sección de refugios y visualiza las mascotas listas para adopción.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:12</span>
+            <div class="subtitle-text">
+              <h4>Detalle e Historia Clínica</h4>
+              <p>Selecciona un perro (ej. Tobías) para conocer su ficha, tamaño, edad y estado de vacunas.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:18</span>
+            <div class="subtitle-text">
+              <h4>Adoptar o Apadrinar</h4>
+              <p>Puede iniciar la postulación para adopción o apadrinar de forma mensual recurrente.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:25</span>
+            <div class="subtitle-text">
+              <h4>Pasaporte de Mascotas</h4>
+              <p>Registra sus propias mascotas cargando foto, raza e historial clínico para generar su QR identificatorio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4b: Demo Administrador/Municipio -->
+    <div class="slide">
+      <span class="badge badge-accent">Demostración de Gestión</span>
+      <h2 class="slide-title">Panel de Control y Zoonosis (Admin)</h2>
+      <div class="demo-container">
+        <div class="video-wrapper">
+          <img src="./mascotapp_demo_1783603389291.webp" alt="Admin Demo Recording" />
+        </div>
+        <div class="subtitles-box">
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:00</span>
+            <div class="subtitle-text">
+              <h4>Mapa en Tiempo Real</h4>
+              <p>Acceso al mapa general de incidencias donde se visualizan todos los perros reportados.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:06</span>
+            <div class="subtitle-text">
+              <h4>Control de Focos Críticos</h4>
+              <p>Los filtros dinámicos permiten aislar reportes según estén Avistados, En Rescate o Adoptados.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:12</span>
+            <div class="subtitle-text">
+              <h4>Reporte Ciudadano Express</h4>
+              <p>Haciendo clic sobre cualquier punto del mapa, se abre el formulario de registro autocompletando la latitud y longitud.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:20</span>
+            <div class="subtitle-text">
+              <h4>Métricas y Estadísticas</h4>
+              <p>Ingreso al panel de control central para auditar la evolución de casos e incidencias municipales.</p>
+            </div>
+          </div>
+          <div class="subtitle-item">
+            <span class="subtitle-time">0:28</span>
+            <div class="subtitle-text">
+              <h4>Gestión de Entidades</h4>
+              <p>Control integral y verificación del padrón de usuarios, refugios y municipalidades en la red.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Slide 5: Pasaporte Digital QR -->
+    <div class="slide">
+      <span class="badge badge-accent">Salud Animal</span>
+      <h2 class="slide-title">Pasaporte Sanitario con Placa QR</h2>
+      <div class="grid-2">
+        <div class="glass-card">
+          <h3 class="grad-text-acc">💳 Ficha Médica Inalterable</h3>
+          <p style="margin-bottom: 1rem;">Cada mascota cuenta con una ficha técnica completa e historial de salud:</p>
+          <ul>
+            <li>Control de Vacunas (Fecha de dosis y vencimiento)</li>
+            <li>Historial de Consultas y Diagnósticos Clínicos</li>
+            <li>Administración simplificada: agregar, editar y eliminar registros</li>
+          </ul>
+        </div>
+        <div class="glass-card text-center">
+          <span style="font-size: 4rem; display: block; margin-bottom: 0.5rem;">🏷️</span>
+          <h3>Placa de Identidad QR</h3>
+          <p style="margin-bottom: 1.5rem;">Un código QR para el collar que cualquier persona puede escanear en caso de extravío para conocer el estado clínico y datos de contacto de la mascota.</p>
+          <div style="background: white; width: 110px; height: 110px; margin: 0 auto; padding: 6px; border-radius: 12px;">
+            <div style="background: #000; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.8rem;">QR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Sustentabilidad y Modelo B2G/B2B -->
+    <div class="slide">
+      <span class="badge badge-green">Modelo de Negocios</span>
+      <h2 class="slide-title">Cómo Escalamos y Monetizamos</h2>
+      <div class="grid-2">
+        <div class="glass-card">
+          <h3>🏛️ Suscripción Municipal (SaaS B2G)</h3>
+          <p>Los municipios pagan una mensualidad fija para acceder a:</p>
+          <ul>
+            <li>Tablero central de zoonosis urbana y denuncias ciudadanas.</li>
+            <li>Software de trazabilidad epidemiológica.</li>
+            <li>Herramienta de derivaciones de rescate oficiales.</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>💰 Comisión y Alianzas (B2B2C)</h3>
+          <p>Monetización cruzada de la comunidad:</p>
+          <ul>
+            <li>Pequeña comisión por procesamiento de donaciones y programas de apadrinamiento recurrente.</li>
+            <li>Pautas publicitarias para marcas de alimentos y clínicas veterinarias integradas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Validación e Impacto -->
+    <div class="slide">
+      <span class="badge badge-blue">Impacto Social</span>
+      <h2 class="slide-title">Beneficios Clave para la Comunidad</h2>
+      <div class="grid-3">
+        <div class="glass-card text-center">
+          <div class="stat-number grad-text">35%</div>
+          <h3>Menos incidentes</h3>
+          <p>Reducción de mordeduras y accidentes de tránsito urbanos mediante alertas sanitarias coordinadas.</p>
+        </div>
+        <div class="glass-card text-center">
+          <div class="stat-number grad-text-sec">5x</div>
+          <h3>Más Adopciones</h3>
+          <p>Incremento en la tasa de adopción al ofrecer pasaportes QR médicos validados y digitalizados.</p>
+        </div>
+        <div class="glass-card text-center">
+          <div class="stat-number grad-text-acc">10h</div>
+          <h3>Ahorradas por Semana</h3>
+          <p>Menos carga administrativa manual en los refugios, permitiendo concentrar recursos en el cuidado animal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Estrategia de Lanzamiento -->
+    <div class="slide">
+      <span class="badge badge-accent">Próximos Pasos</span>
+      <h2 class="slide-title">Plan Go-To-Market (Lanzamiento)</h2>
+      <div class="grid-2">
+        <div class="glass-card">
+          <h3 class="grad-text-acc">📍 Fase 1: Municipio Piloto</h3>
+          <p>Alianza inicial con un municipio seleccionado para implementar el mapa de reportes y capacitar a la red de refugios locales.</p>
+        </div>
+        <div class="glass-card">
+          <h3 class="grad-text-acc">📢 Fase 2: Campaña Comunitaria</h3>
+          <p>Distribución de las primeras 1,000 placas identificadoras QR en ferias de adopción municipales para captar usuarios ciudadanos y validar el software.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 9: Conclusión y Llamado a la Acción -->
+    <div class="slide hero-slide">
+      <span class="badge badge-green">PataApp 2026</span>
+      <h2 class="slide-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Unamos las Patas</h2>
+      <p style="font-size: 1.3rem; max-w: 700px; margin-bottom: 2.5rem; color: var(--text-gray);">
+        Te invitamos a ser parte del cambio en la infraestructura de salud urbana e impacto animal de la región.
+      </p>
+      <div class="grid-3" style="width: 100%; max-w: 800px; margin: 0 auto;">
+        <div class="glass-card" style="padding: 1.2rem;">
+          <p style="font-size: 0.85rem; color: var(--text-gray);">Municipios</p>
+          <span style="font-weight: 700; color: white;">gobierno@pataapp.com</span>
+        </div>
+        <div class="glass-card" style="padding: 1.2rem;">
+          <p style="font-size: 0.85rem; color: var(--text-gray);">Refugios</p>
+          <span style="font-weight: 700; color: white;">refugios@pataapp.com</span>
+        </div>
+        <div class="glass-card" style="padding: 1.2rem;">
+          <p style="font-size: 0.85rem; color: var(--text-gray);">Inversores</p>
+          <span style="font-weight: 700; color: white;">inversion@pataapp.com</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Slide Navigation Controls -->
+  <div class="controls">
+    <button class="nav-btn" id="prev-btn" title="Anterior (←)">←</button>
+    <button class="nav-btn" id="next-btn" title="Siguiente (→ / Espacio)">→</button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const progressBar = document.getElementById('progress-bar');
+    let currentSlide = 0;
+
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      // Update progress bar
+      const progress = ((currentSlide + 1) / slides.length) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlides();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlides();
+      }
+    }
+
+    // Event Listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      }
+    });
+
+    // Initialize progress bar
+    updateSlides();
+  </script>
+</body>
+</html>
