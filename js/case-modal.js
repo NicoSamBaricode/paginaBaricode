@@ -57,7 +57,7 @@ const caseStudiesData = {
         serviceKey: "opt_web_app"
     },
     "hotel-nico": {
-        title: "Hotel Nico - PMS Hotelero",
+        title: "Hotel Bari Code - PMS Hotelero",
         badge: "Hospitality & Gestión Hotelera",
         clientType: "Hoteles Boutique, Cabañas y Alojamientos Turísticos",
         summary: "Sistema PMS para control de reservas, check-in digital, gobernanza y facturación.",

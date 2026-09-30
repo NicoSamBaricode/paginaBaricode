@@ -16,8 +16,8 @@ const translations = {
         "hero_badge_ai": "Inteligencia Artificial Aplicada",
         "hero_badge_availability": "Proyectos 100% a medida",
         "hero_badge_international": "Clientes en Arg, Latam, USA y España",
-        "hero_title_line1": "Software a medida para empresas que quieren",
-        "hero_title_gradient": "automatizar, vender más y operar mejor.",
+        "hero_title_line1": "Software a medida, ¿querés",
+        "hero_title_gradient": "automatizar, vender más y operar mejor?",
         "hero_subtitle": "Diseñamos aplicaciones web, sistemas internos y soluciones con inteligencia artificial adaptadas a los procesos de tu negocio.",
         "hero_cta_primary": "Agendar diagnóstico sin cargo",
         "hero_cta_secondary": "Ver casos reales",
@@ -84,7 +84,7 @@ const translations = {
 
         // Case 3
         "case3_tag": "Gestión Hotelera (PMS)",
-        "case3_title": "Hotel Nico - PMS Hotelero",
+        "case3_title": "Hotel Bari Code - PMS Hotelero",
         "case3_desc": "Sistema de gestión integral para alojamientos turísticos y hoteles independientes. Centraliza reservas, calendario de disponibilidad en tiempo real, facturación y gobernanza operativa.",
         "case3_stat": "0 overbookings | Ahorro de 4 horas diarias de administración",
 
@@ -184,8 +184,8 @@ const translations = {
         "hero_badge_ai": "Applied Artificial Intelligence",
         "hero_badge_availability": "100% Tailored Development",
         "hero_badge_international": "Clients in US, Spain, Arg & Latam",
-        "hero_title_line1": "Custom software for companies that want to",
-        "hero_title_gradient": "automate, sell more, and operate smarter.",
+        "hero_title_line1": "Custom software, looking to",
+        "hero_title_gradient": "automate, sell more, and operate smarter?",
         "hero_subtitle": "We engineer custom web applications, internal systems, and AI-powered solutions tailored to your business processes.",
         "hero_cta_primary": "Book a Free Discovery Call",
         "hero_cta_secondary": "View Real Case Studies",
@@ -252,7 +252,7 @@ const translations = {
 
         // Case 3
         "case3_tag": "Hospitality & Hotel PMS",
-        "case3_title": "Hotel Nico - PMS Platform",
+        "case3_title": "Hotel Bari Code - PMS Platform",
         "case3_desc": "Full Property Management System for boutique hotels and independent resorts. Unifies live reservation calendars, housekeeping workflows, invoicing, and occupancy reporting.",
         "case3_stat": "0 overbookings | 4 daily hours saved in repetitive administration",
 
