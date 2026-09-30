@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baricode | Software a Medida</title>
+    <title>Bari Code | Desarrollo de Software a Medida, Apps & Automatización con IA</title>
+    <meta name="description" content="Software a medida para empresas que quieren automatizar, vender más y operar mejor. Diseñamos aplicaciones web, apps móviles y soluciones con IA en Argentina, Latam, España y USA.">
+    <meta name="keywords" content="desarrollo de software a medida, empresa de desarrollo de software Argentina, automatizacion con inteligencia artificial para empresas, desarrollo de aplicaciones web, chatbots con IA para empresas, custom software development company, nearshore software development Argentina">
+    <link rel="canonical" href="https://bari-code.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bari-code.com/">
+    <meta property="og:title" content="Bari Code | Software a Medida & Automatización con IA">
+    <meta property="og:description" content="Creamos aplicaciones web, sistemas internos y soluciones con IA adaptadas a los procesos de tu negocio. Clientes en Argentina, Latam, España y EE. UU.">
+    <meta property="og:image" content="https://bari-code.com/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bari Code | Software a Medida & Automatización con IA">
+    <meta name="twitter:description" content="Software a medida para empresas que quieren automatizar, vender más y operar mejor.">
+    <meta name="twitter:image" content="https://bari-code.com/logo.png">
+
     <link rel="icon" type="image/png" href="favicon.PNG">
+    
+    <!-- Google Fonts & Tailwind CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,685 +34,1196 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0a1628',
-                            navy: '#1e3a5f',
+                            dark: '#070d18',
+                            navy: '#0e1e38',
                             blue: '#2563eb',
                             cyan: '#06b6d4',
-                            light: '#e0f2fe'
+                            light: '#f0f9ff'
                         }
                     },
                     fontFamily: {
                         sans: ['Outfit', 'system-ui', 'sans-serif']
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+    
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bari Code",
+      "url": "https://bari-code.com",
+      "logo": "https://bari-code.com/logo.png",
+      "description": "Empresa de desarrollo de software a medida, aplicaciones web, móviles y automatizaciones con Inteligencia Artificial para empresas en Argentina, Latinoamérica, España y Estados Unidos.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Carlos de Bariloche",
+        "addressRegion": "Río Negro",
+        "addressCountry": "AR"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+54-2944-317769",
+          "contactType": "sales",
+          "email": "ventas@bari-code.com",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+54-2944-317769",
+          "contactType": "customer service",
+          "email": "info@bari-code.com",
+          "availableLanguage": ["Spanish", "English"]
         }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .gradient-mesh {
-            background: 
-                radial-gradient(at 40% 20%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
-                radial-gradient(at 80% 50%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(37, 99, 235, 0.1) 0px, transparent 50%);
-        }
-        
-        .pattern-dots {
-            background-image: radial-gradient(rgba(37, 99, 235, 0.15) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #2563eb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: gradient-shift 3s ease infinite;
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .hover-lift {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-8px);
-        }
-        
-        .glow-btn {
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(6, 182, 212, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .glow-btn:hover {
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.5), 0 0 60px rgba(6, 182, 212, 0.2);
-        }
-        
-        section {
-            scroll-margin-top: 80px;
-        }
-    </style>
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/baricode"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-white text-brand-dark font-sans overflow-x-hidden">
     
     <!-- Background Effects -->
     <div class="fixed inset-0 gradient-mesh pattern-dots -z-10"></div>
     
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass-card">
+    <!-- Top Bar for International Availability -->
+    <div class="bg-brand-navy text-white text-xs py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+                <span data-i18n="hero_badge_international">Clientes en Argentina, Latam, USA y España</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:inline text-gray-300">Nearshore & Remote Tech Partner</span>
+                <!-- Language Selector -->
+                <div class="flex items-center bg-white/10 rounded-full p-0.5 border border-white/20 text-xs">
+                    <button type="button" class="lang-btn px-2.5 py-0.5 rounded-full font-bold transition" data-lang="es">ES</button>
+                    <button type="button" class="lang-btn px-2.5 py-0.5 rounded-full font-bold transition" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="sticky top-0 w-full z-40 glass-nav shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="#" class="flex items-center gap-3 group">
-                    <img src="logo.png" alt="Baricode" class="h-14 w-auto group-hover:scale-105 transition-transform">
+                    <img src="logo.png" alt="Bari Code - Desarrollo de Software" class="h-12 sm:h-14 w-auto group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#about" class="text-gray-600 hover:text-brand-blue font-medium transition">Nosotros</a>
-                    <a href="#demos" class="text-gray-600 hover:text-brand-blue font-medium transition">Proyectos</a>
-                    <a href="#services" class="text-gray-600 hover:text-brand-blue font-medium transition">Servicios</a>
-                    <a href="#contact" class="text-gray-600 hover:text-brand-blue font-medium transition">Contacto</a>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+                    <a href="#about" class="text-gray-700 hover:text-brand-blue transition" data-i18n="nav_about">Nosotros</a>
+                    <a href="#demos" class="text-gray-700 hover:text-brand-blue transition" data-i18n="nav_cases">Casos de Éxito</a>
+                    <a href="#services" class="text-gray-700 hover:text-brand-blue transition" data-i18n="nav_services">Servicios</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue transition" data-i18n="nav_contact">Contacto</a>
                 </div>
-                <a href="#contact" class="hidden sm:block bg-brand-blue text-white px-6 py-3 rounded-full font-semibold hover-lift glow-btn">
-                    Cotizar Ahora
-                </a>
+
+                <!-- Action Button & CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button type="button" data-open-booking data-origin="nav_cta" class="bg-gradient-to-r from-brand-blue to-brand-cyan text-white px-5 py-2.5 rounded-full font-semibold text-sm hover-lift glow-btn inline-flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span data-i18n="nav_cta">Agendar Diagnóstico</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button type="button" id="mobileMenuBtn" aria-label="Abrir menú" class="p-2 rounded-xl text-gray-700 hover:bg-gray-100 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-gray-200 px-6 py-5 space-y-4 shadow-xl">
+            <a href="#about" class="block text-gray-800 font-medium py-2 border-b border-gray-100" data-i18n="nav_about">Nosotros</a>
+            <a href="#demos" class="block text-gray-800 font-medium py-2 border-b border-gray-100" data-i18n="nav_cases">Casos de Éxito</a>
+            <a href="#services" class="block text-gray-800 font-medium py-2 border-b border-gray-100" data-i18n="nav_services">Servicios</a>
+            <a href="#contact" class="block text-gray-800 font-medium py-2 border-b border-gray-100" data-i18n="nav_contact">Contacto</a>
+            <div class="pt-2">
+                <button type="button" data-open-booking data-origin="mobile_menu_cta" class="w-full text-center bg-gradient-to-r from-brand-blue to-brand-cyan text-white py-3 rounded-xl font-semibold shadow-md">
+                    <span data-i18n="nav_cta">Agendar Diagnóstico</span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20">
-        <div class="absolute inset-0 overflow-hidden -z-10">
-            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-brand-blue/10 rounded-full blur-3xl"></div>
+    <header class="relative min-h-[88vh] flex items-center pt-8 pb-16">
+        <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-cyan/15 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 px-4 py-2 rounded-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left Column: Commercial Copy & CTAs -->
+                <div class="lg:col-span-7">
+                    <!-- Badges -->
+                    <div class="flex flex-wrap gap-2.5 mb-6">
+                        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 px-3.5 py-1.5 rounded-full">
                             <span class="text-base">🧠</span>
-                            <span class="text-sm font-medium text-purple-700">Expertos en IA</span>
+                            <span class="text-xs sm:text-sm font-semibold text-purple-800" data-i18n="hero_badge_ai">Inteligencia Artificial Aplicada</span>
                         </div>
-                        <div class="inline-flex items-center gap-2 bg-brand-light px-4 py-2 rounded-full">
+                        <div class="inline-flex items-center gap-2 bg-brand-light border border-brand-blue/20 px-3.5 py-1.5 rounded-full">
                             <span class="w-2 h-2 bg-brand-cyan rounded-full animate-pulse"></span>
-                            <span class="text-sm font-medium text-brand-navy">Disponible para nuevos proyectos</span>
+                            <span class="text-xs sm:text-sm font-semibold text-brand-navy" data-i18n="hero_badge_availability">Proyectos 100% a medida</span>
                         </div>
                     </div>
                     
-                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-                        <span class="text-gray-900">Creamos</span><br>
-                        <span class="text-gradient">Software Único</span>
+                    <!-- Main Value Proposition Title -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-950 mb-6 leading-[1.15] tracking-tight">
+                        <span data-i18n="hero_title_line1">Software a medida para empresas que quieren</span><br>
+                        <span class="text-gradient" data-i18n="hero_title_gradient">automatizar, vender más y operar mejor.</span>
                     </h1>
                     
-                    <p class="text-xl text-gray-600 mb-8 max-w-lg">
-                        Transformamos tus ideas en soluciones digitales personalizadas. 
-                        Desarrollo a medida para empresas que innovan.
+                    <!-- Subtitle -->
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed font-normal" data-i18n="hero_subtitle">
+                        Diseñamos aplicaciones web, sistemas internos y soluciones con inteligencia artificial adaptadas a los procesos de tu negocio.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 relative z-10">
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white px-8 py-4 rounded-full font-semibold hover-lift glow-btn cursor-pointer">
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                        <button type="button" data-open-booking data-origin="hero_primary" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-blue via-blue-600 to-brand-cyan text-white px-8 py-4 rounded-2xl font-bold text-base hover-lift glow-btn shadow-xl cursor-pointer">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
-                            Pedir Cotización
-                        </a>
-                        <a href="#demos" class="inline-flex items-center justify-center gap-2 border-2 border-brand-navy text-brand-navy px-8 py-4 rounded-full font-semibold hover-lift hover:bg-brand-navy hover:text-white transition cursor-pointer">
-                            Ver Proyectos
+                            <span data-i18n="hero_cta_primary">Agendar diagnóstico sin cargo</span>
+                        </button>
+
+                        <a href="#demos" class="inline-flex items-center justify-center gap-2 border-2 border-brand-navy/80 text-brand-navy px-7 py-4 rounded-2xl font-bold text-base hover-lift hover:bg-brand-navy hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            <span data-i18n="hero_cta_secondary">Ver casos reales</span>
                         </a>
                     </div>
                     
-                    <div class="flex items-center gap-8 mt-12 pt-8 border-t border-gray-200">
-                        <div>
-                            <p class="text-3xl font-bold text-brand-blue">50+</p>
-                            <p class="text-gray-500 text-sm">Proyectos</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-brand-cyan">100%</p>
-                            <p class="text-gray-500 text-sm">Personalizado</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-brand-blue">24/7</p>
-                            <p class="text-gray-500 text-sm">Soporte</p>
-                        </div>
-                    </div>
+                    <!-- Reassurance sentence -->
+                    <p class="text-sm text-gray-500 font-medium flex items-center gap-2" data-i18n="hero_reassurance">
+                        <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Contanos qué querés resolver. Analizamos tu necesidad y te orientamos sin compromiso.</span>
+                    </p>
                 </div>
                 
-                <div class="order-1 lg:order-2 relative">
+                <!-- Hero Right Column: Dynamic Interactive Tech Card -->
+                <div class="lg:col-span-5 relative">
                     <div class="relative animate-float">
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-cyan to-brand-blue rounded-3xl blur-xl opacity-30"></div>
-                        <div class="relative glass-card rounded-3xl p-8 shadow-2xl">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl p-6 text-white">
-                                    <svg class="w-10 h-10 mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                    <p class="font-semibold">Web Apps</p>
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-blue via-brand-cyan to-indigo-600 rounded-3xl blur-xl opacity-30"></div>
+                        <div class="relative glass-card rounded-3xl p-7 sm:p-8 shadow-2xl border border-white/80">
+                            
+                            <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                                    <span class="text-xs font-mono text-gray-400 ml-2">baricode://architecture</span>
                                 </div>
-                                <div class="bg-gradient-to-br from-brand-navy to-brand-blue rounded-2xl p-6 text-white">
-                                    <svg class="w-10 h-10 mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                                    </svg>
-                                    <p class="font-semibold">Mobile</p>
+                                <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">Production Ready</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3.5">
+                                <div class="bg-gradient-to-br from-brand-blue to-blue-700 rounded-2xl p-5 text-white shadow-md hover-lift">
+                                    <div class="text-2xl mb-2">💻</div>
+                                    <p class="font-bold text-sm sm:text-base leading-tight">Web Apps & SaaS</p>
+                                    <p class="text-white/75 text-xs mt-1">Arquitectura escalable</p>
                                 </div>
-                                <div class="bg-gradient-to-br from-brand-cyan to-brand-blue rounded-2xl p-6 text-white">
-                                    <svg class="w-10 h-10 mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-                                    </svg>
-                                    <p class="font-semibold">AI</p>
+
+                                <div class="bg-gradient-to-br from-brand-navy to-slate-900 rounded-2xl p-5 text-white shadow-md hover-lift">
+                                    <div class="text-2xl mb-2">📱</div>
+                                    <p class="font-bold text-sm sm:text-base leading-tight">Mobile Apps</p>
+                                    <p class="text-white/75 text-xs mt-1">iOS & Android</p>
                                 </div>
-                                <div class="bg-gradient-to-br from-brand-blue to-brand-navy rounded-2xl p-6 text-white">
-                                    <svg class="w-10 h-10 mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.414 1.414.586 3.414-.586 3.414H14a2 2 0 01-2-2V8.828l-1-1z"/>
-                                    </svg>
-                                    <p class="font-semibold">API</p>
+
+                                <div class="bg-gradient-to-br from-cyan-600 to-teal-700 rounded-2xl p-5 text-white shadow-md hover-lift">
+                                    <div class="text-2xl mb-2">🤖</div>
+                                    <p class="font-bold text-sm sm:text-base leading-tight">Inteligencia Artificial</p>
+                                    <p class="text-white/75 text-xs mt-1">Bots y automatización</p>
                                 </div>
+
+                                <div class="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl p-5 text-white shadow-md hover-lift">
+                                    <div class="text-2xl mb-2">⚡</div>
+                                    <p class="font-bold text-sm sm:text-base leading-tight">APIs & Cloud</p>
+                                    <p class="text-white/75 text-xs mt-1">Integración total</p>
+                                </div>
+                            </div>
+
+                            <!-- Live Trust Micro-Banner -->
+                            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-medium">
+                                <span>🔒 Código Propietario</span>
+                                <span>🚀 Sprints Quincenales</span>
+                                <span>🌎 Global Nearshore</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+
+    <!-- SECTION 3: Trust & Credibility Bar (Pruebas de Confianza Reales) -->
+    <section class="py-12 bg-slate-900 text-white border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <span class="text-brand-cyan text-xs font-bold tracking-widest uppercase" data-i18n="trust_heading">Confianza y Respaldo Tecnológico para Empresas Exigentes</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Metric 1: Proyectos -->
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover-lift">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-brand-cyan mb-1" data-i18n="metric_projects_count">+50</p>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-200" data-i18n="metric_projects_label">Proyectos Realizados</p>
+                    <p class="text-xs text-gray-400 mt-1 hidden sm:block">Entregados con éxito en diversas industrias</p>
+                </div>
+
+                <!-- Metric 2: A Medida -->
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover-lift">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-brand-cyan mb-1" data-i18n="metric_custom_count">100%</p>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-200" data-i18n="metric_custom_label">Desarrollo a Medida</p>
+                    <p class="text-xs text-gray-400 mt-1 hidden sm:block">Sin plantillas rígidas ni código genérico</p>
+                </div>
+
+                <!-- Metric 3: Metodología Ágil -->
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover-lift">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400 mb-1" data-i18n="metric_agile_count">Ágil</p>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-200" data-i18n="metric_agile_label">Metodología & Sprints</p>
+                    <p class="text-xs text-gray-400 mt-1 hidden sm:block">Entregas continuas cada 2 semanas</p>
+                </div>
+
+                <!-- Metric 4: Soporte Post-Lanzamiento -->
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover-lift">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-1" data-i18n="metric_support_count">Continuo</p>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-200" data-i18n="metric_support_label">Soporte Post-Lanzamiento</p>
+                    <p class="text-xs text-gray-400 mt-1 hidden sm:block">Mantenimiento evolutivo y estabilidad garantizada</p>
+                </div>
+            </div>
+
+            <!-- Tech Stack & Tools Carousel/Badges -->
+            <div class="mt-10 pt-8 border-t border-slate-800 text-center">
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-4">Tecnologías y herramientas que dominamos</p>
+                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-xs font-mono text-gray-300">
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">TypeScript</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">React</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">Angular</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">Node.js</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">Python / FastAPI</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">PHP / Laravel</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">OpenAI & Anthropic APIs</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">PostgreSQL</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">Docker & AWS</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-brand-dark relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
+    <!-- SECTION 4: About Section (Enfoque en Resultados de Negocio) -->
+    <section id="about" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-15 pointer-events-none">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue to-transparent"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl sm:text-5xl font-bold text-white mb-8">
-                        Somos <span class="text-gradient">Baricode</span>
-                    </h2>
-                    <div class="space-y-6 text-gray-300 text-lg">
-                        <p>
-                            <strong class="text-white">Tu visión + nuestra tecnología = soluciones únicas.</strong><br>
-                            Creamos software que realmente resuelve los problemas de tu empresa.
-                        </p>
-                        <p>
-                            No usamos plantillas. Cada proyecto es único y se desarrolla 
-                            específicamente para vos. Nos adaptamos a tus procesos, no al revés.
-                        </p>
-                        <p>
-                            Trabajamos con metodologías ágiles para entregar resultados 
-                            rápidos sin comprometer la calidad.
-                        </p>
-                    </div>
+            <div class="grid lg:grid-cols-12 gap-14 items-center">
+                
+                <!-- Left: Business-oriented narrative -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block px-3.5 py-1.5 bg-brand-blue/20 text-brand-cyan font-semibold text-xs rounded-full border border-brand-cyan/30 uppercase tracking-wider" data-i18n="about_tag">
+                        Sobre Bari Code
+                    </span>
                     
-                    <div class="grid grid-cols-2 gap-4 mt-10">
-                        <div class="bg-white/5 backdrop-blur rounded-2xl p-5 border border-white/10 hover-lift">
-                            <div class="text-3xl font-bold text-brand-cyan mb-1">100%</div>
-                            <div class="text-gray-400 text-sm">Personalizado</div>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur rounded-2xl p-5 border border-white/10 hover-lift">
-                            <div class="text-3xl font-bold text-brand-cyan mb-1">24/7</div>
-                            <div class="text-gray-400 text-sm">Soporte</div>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur rounded-2xl p-5 border border-white/10 hover-lift">
-                            <div class="text-3xl font-bold text-brand-cyan mb-1">Agile</div>
-                            <div class="text-gray-400 text-sm">Metodología</div>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur rounded-2xl p-5 border border-white/10 hover-lift">
-                            <div class="text-3xl font-bold text-brand-cyan mb-1">Pro</div>
-                            <div class="text-gray-400 text-sm">Calidad</div>
-                        </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+                        <span data-i18n="about_title">No desarrollamos software genérico.</span>
+                    </h2>
+                    
+                    <p class="text-lg sm:text-xl text-brand-cyan font-medium leading-relaxed" data-i18n="about_lead">
+                        Analizamos tus procesos, detectamos oportunidades de mejora y creamos herramientas digitales que reducen tareas manuales, centralizan información y acompañan el crecimiento de tu empresa.
+                    </p>
+                    
+                    <p class="text-gray-300 leading-relaxed" data-i18n="about_p1">
+                        Nos involucramos a fondo en la lógica de tu negocio. No forzamos tu empresa a un software empaquetado: construimos la tecnología alrededor de cómo trabajás vos y tu equipo.
+                    </p>
+
+                    <p class="text-gray-300 leading-relaxed" data-i18n="about_p2">
+                        Desde Bariloche hacia el mundo, combinamos excelencia en ingeniería de software con visión estratégica de negocio y adopción práctica de Inteligencia Artificial.
+                    </p>
+
+                    <div class="pt-4">
+                        <button type="button" data-open-booking data-origin="about_cta" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white px-7 py-3.5 rounded-2xl font-bold hover-lift glow-btn">
+                            <span data-i18n="nav_cta">Agendar Diagnóstico</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-blue to-brand-cyan rounded-3xl blur-2xl opacity-30"></div>
-                    <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                <!-- Right: 4 Concrete Pillars for Business Impact -->
+                <div class="lg:col-span-6">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        
+                        <!-- Pillar 1 -->
+                        <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover-lift group">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-blue/20 flex items-center justify-center text-brand-cyan mb-4 group-hover:bg-brand-blue group-hover:text-white transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                                 </svg>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Desarrollo a Medida</h3>
-                                <p class="text-gray-400">Soluciones que grow con tu negocio</p>
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="about_pillar1_title">Arquitectura Escalable</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed" data-i18n="about_pillar1_desc">Estructuras sólidas preparadas para soportar alto tráfico y crecer sin rehacer código.</p>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover-lift group">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-cyan/20 flex items-center justify-center text-brand-cyan mb-4 group-hover:bg-brand-cyan group-hover:text-slate-900 transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="about_pillar2_title">UI/UX Centrado en el Usuario</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed" data-i18n="about_pillar2_desc">Interfaces limpias y fluidas para que tu equipo y clientes las adopten sin curva de fricción.</p>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover-lift group">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="about_pillar3_title">Integración con Sistemas</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed" data-i18n="about_pillar3_desc">Conexión fluida con tus ERPs, CRMs, pasarelas de pago y APIs preexistentes.</p>
+                        </div>
+
+                        <!-- Pillar 4 -->
+                        <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover-lift group">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="about_pillar4_title">Acompañamiento Continuo</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed" data-i18n="about_pillar4_desc">Garantía de calidad, monitoreo proactivo y evolución continua de tus aplicaciones.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Case Studies (Casos de Éxito Reales) -->
+    <section id="demos" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 bg-brand-light text-brand-blue font-bold text-xs uppercase tracking-wider rounded-full mb-3 border border-blue-200" data-i18n="cases_tag">
+                    Casos de Éxito Reales
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-950 mb-4 tracking-tight" data-i18n="cases_title">
+                    Impacto y Resultados Comprobados
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto font-normal" data-i18n="cases_subtitle">
+                    Explorá cómo ayudamos a empresas e instituciones a optimizar sus operaciones y multiplicar sus ventas con tecnología a medida.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 gap-8">
+                
+                <!-- Case 1: MascotApp -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover-lift border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-60 bg-gradient-to-br from-blue-600 via-cyan-600 to-indigo-700 overflow-hidden flex items-center justify-center">
+                            <span class="text-8xl group-hover:scale-110 transition-transform duration-500">🐾</span>
+                            <div class="absolute top-4 left-4 bg-black/40 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-semibold" data-i18n="case1_tag">
+                                Salud Animal & Sector Público
+                            </div>
+                            <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                En Producción
                             </div>
                         </div>
                         
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <div class="w-6 h-6 bg-brand-cyan/20 rounded-full flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-brand-cyan" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <span>Arquitectura escalable</span>
+                        <div class="p-7">
+                            <h3 class="text-2xl font-extrabold text-gray-950 mb-2" data-i18n="case1_title">MascotApp</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="case1_desc">
+                                Plataforma integral de fauna urbana y control de zoonosis. Conecta ciudadanos, veterinarias y municipios con pasaportes sanitarios QR, rescates coordinados y censos geolocalizados.
+                            </p>
+                            
+                            <!-- Impact highlight -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5">
+                                <p class="text-xs font-bold text-brand-blue flex items-center gap-1.5" data-i18n="case1_stat">
+                                    <span>📈</span> +15.000 mascotas registradas | 70% menos tiempo en adopciones
+                                </p>
                             </div>
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <div class="w-6 h-6 bg-brand-cyan/20 rounded-full flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-brand-cyan" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <span>UI/UX centrado en el usuario</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <div class="w-6 h-6 bg-brand-cyan/20 rounded-full flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-brand-cyan" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <span>Integración con sistemas existentes</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <div class="w-6 h-6 bg-brand-cyan/20 rounded-full flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-brand-cyan" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <span>Soporte continuo</span>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Angular</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Node.js</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">PostgreSQL</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">QR Cloud</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="px-7 pb-7 pt-0 flex flex-col sm:flex-row gap-3">
+                        <button type="button" data-open-case="mascotapp" class="flex-1 py-3 px-4 bg-brand-navy text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition text-center flex items-center justify-center gap-2">
+                            <span data-i18n="case_btn_details">Ver Caso Completo</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="/presentacion/" class="py-3 px-4 bg-brand-light text-brand-blue border border-brand-blue/30 rounded-xl font-bold text-sm hover:bg-brand-blue hover:text-white transition text-center">
+                            📊 Demo & Pitch
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Case 2: Travel CRM -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover-lift border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-60 bg-gradient-to-br from-amber-500 via-orange-600 to-red-600 overflow-hidden flex items-center justify-center">
+                            <span class="text-8xl group-hover:scale-110 transition-transform duration-500">✈️</span>
+                            <div class="absolute top-4 left-4 bg-black/40 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-semibold" data-i18n="case2_tag">
+                                Gestión & CRM Turístico
+                            </div>
+                            <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                En Producción
+                            </div>
+                        </div>
+                        
+                        <div class="p-7">
+                            <h3 class="text-2xl font-extrabold text-gray-950 mb-2" data-i18n="case2_title">Travel & Agency CRM</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="case2_desc">
+                                CRM a medida para agencias de viajes internacionales especializadas en parques temáticos. Cotización automatizada de paquetes en minutos, liquidación de comisiones y métricas en vivo.
+                            </p>
+                            
+                            <!-- Impact highlight -->
+                            <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-5">
+                                <p class="text-xs font-bold text-amber-800 flex items-center gap-1.5" data-i18n="case2_stat">
+                                    <span>⚡</span> Cotizaciones en 3 min (90% más rápido) | +35% tasa de cierre
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Angular</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Express.js</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">MongoDB</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">PDF Engine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7 pt-0 flex flex-col sm:flex-row gap-3">
+                        <button type="button" data-open-case="travel-crm" class="flex-1 py-3 px-4 bg-brand-navy text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition text-center flex items-center justify-center gap-2">
+                            <span data-i18n="case_btn_details">Ver Caso Completo</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="https://maviarenterprises.cloud" target="_blank" rel="noopener noreferrer" class="py-3 px-4 bg-brand-blue text-white rounded-xl font-bold text-sm hover:bg-blue-700 transition text-center">
+                            🚀 Ir al Sitio
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case 3: Hotel Nico PMS -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover-lift border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-60 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 overflow-hidden flex items-center justify-center">
+                            <span class="text-8xl group-hover:scale-110 transition-transform duration-500">🏨</span>
+                            <div class="absolute top-4 left-4 bg-black/40 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-semibold" data-i18n="case3_tag">
+                                Gestión Hotelera (PMS)
+                            </div>
+                            <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                En Producción
+                            </div>
+                        </div>
+                        
+                        <div class="p-7">
+                            <h3 class="text-2xl font-extrabold text-gray-950 mb-2" data-i18n="case3_title">Hotel Nico - PMS Hotelero</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="case3_desc">
+                                Sistema de gestión integral para alojamientos turísticos y hoteles independientes. Centraliza reservas, calendario de disponibilidad en tiempo real, facturación y gobernanza operativa.
+                            </p>
+                            
+                            <!-- Impact highlight -->
+                            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3 mb-5">
+                                <p class="text-xs font-bold text-emerald-800 flex items-center gap-1.5" data-i18n="case3_stat">
+                                    <span>🎯</span> 0 overbookings | Ahorro de 4 horas diarias de administración
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Laravel</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">MySQL</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Alpine.js</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">TailwindCSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7 pt-0 flex flex-col sm:flex-row gap-3">
+                        <button type="button" data-open-case="hotel-nico" class="flex-1 py-3 px-4 bg-brand-navy text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition text-center flex items-center justify-center gap-2">
+                            <span data-i18n="case_btn_details">Ver Caso Completo</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="https://hotel.bari-code.com" target="_blank" rel="noopener noreferrer" class="py-3 px-4 bg-brand-blue text-white rounded-xl font-bold text-sm hover:bg-blue-700 transition text-center">
+                            🚀 Ir al Sitio
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case 4: Turnero Pro -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover-lift border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-60 bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-800 overflow-hidden flex items-center justify-center">
+                            <span class="text-8xl group-hover:scale-110 transition-transform duration-500">📅</span>
+                            <div class="absolute top-4 left-4 bg-black/40 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-semibold" data-i18n="case4_tag">
+                                Agenda & Turnos Online
+                            </div>
+                            <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                En Producción
+                            </div>
+                        </div>
+                        
+                        <div class="p-7">
+                            <h3 class="text-2xl font-extrabold text-gray-950 mb-2" data-i18n="case4_title">Turnero Pro</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="case4_desc">
+                                Plataforma SaaS para reserva y administración de turnos online 24/7 con recordatorios inteligentes y confirmaciones automatizadas por WhatsApp para profesionales y consultorios.
+                            </p>
+                            
+                            <!-- Impact highlight -->
+                            <div class="bg-cyan-50 border border-cyan-200 rounded-xl p-3 mb-5">
+                                <p class="text-xs font-bold text-cyan-800 flex items-center gap-1.5" data-i18n="case4_stat">
+                                    <span>📲</span> Reducción de ausentismo del 30% al 6% | Agenda 100% automatizada
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">React</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">Node.js</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">WhatsApp API</span>
+                                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">MariaDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7 pt-0 flex flex-col sm:flex-row gap-3">
+                        <button type="button" data-open-case="turnero-pro" class="flex-1 py-3 px-4 bg-brand-navy text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition text-center flex items-center justify-center gap-2">
+                            <span data-i18n="case_btn_details">Ver Caso Completo</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="https://turnero.bari-code.com" target="_blank" rel="noopener noreferrer" class="py-3 px-4 bg-brand-blue text-white rounded-xl font-bold text-sm hover:bg-blue-700 transition text-center">
+                            🚀 Ir al Sitio
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Demos Section -->
-    <section id="demos" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-brand-light text-brand-blue font-medium text-sm rounded-full mb-4">Portafolio</span>
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Proyectos Realizados</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Trabajos que demuestran nuestra capacidad de crear soluciones únicas.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-8">
-                <!-- Project 1: MascotApp -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover-lift border border-gray-100">
-                    <div class="relative h-56 bg-gradient-to-br from-brand-blue via-brand-cyan to-brand-blue overflow-hidden">
-                        <div class="absolute inset-0 bg-grid-white/10"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-7xl group-hover:scale-110 transition-transform duration-300">🐾</span>
-                        </div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-medium">Salud & Comunidad</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">MascotApp</h3>
-                        <p class="text-gray-600 mb-4 h-24 text-sm leading-relaxed">Plataforma integral de fauna urbana y control de zoonosis. Conecta ciudadanos, municipios y refugios para rescates coordinados, pasaportes sanitarios con código QR y adopciones responsables.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Angular</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Node.js</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">PostgreSQL</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="/presentacion/" class="flex-1 inline-flex items-center justify-center gap-2 py-3 border-2 border-brand-navy text-brand-navy rounded-xl font-medium hover:bg-brand-navy hover:text-white transition-all text-sm">
-                                📊 Ver Demo & Pitch
-                            </a>
-                            <a href="https://mascotapp.bari-code.com" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 py-3 bg-brand-blue text-white rounded-xl font-medium hover:bg-brand-blue/90 transition-all text-sm shadow-lg shadow-brand-blue/20">
-                                🚀 Ir al Sitio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Disney CRM -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover-lift border border-gray-100">
-                    <div class="relative h-56 bg-gradient-to-br from-amber-500 to-orange-600 overflow-hidden">
-                        <div class="absolute inset-0 bg-grid-white/10"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-7xl group-hover:scale-110 transition-transform duration-300">🏰</span>
-                        </div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-medium">Gestión & CRM</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Disney CRM</h3>
-                        <p class="text-gray-600 mb-4 h-24 text-sm leading-relaxed">CRM a medida para agencias de viajes asociadas a Disney & Universal. Permite la cotización automatizada, liquidación de comisiones de agentes y estadísticas de ventas en tiempo real.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Angular</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Express</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">MongoDB</span>
-                        </div>
-                        <a href="https://maviarenterprises.cloud" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-brand-blue text-white rounded-xl font-medium hover:bg-brand-blue/90 transition-all text-sm shadow-lg shadow-brand-blue/20">
-                            🚀 Ir al Sitio
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: Hotel Nico -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover-lift border border-gray-100">
-                    <div class="relative h-56 bg-gradient-to-br from-emerald-500 to-teal-600 overflow-hidden">
-                        <div class="absolute inset-0 bg-grid-white/10"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-7xl group-hover:scale-110 transition-transform duration-300">🏨</span>
-                        </div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-medium">Gestión Hotelera</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hotel Nico</h3>
-                        <p class="text-gray-600 mb-4 h-24 text-sm leading-relaxed">PMS de gestión hotelera para hoteles independientes. Control de disponibilidad de habitaciones, check-in / check-out de huéspedes, facturación y reportes de ocupación diaria.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">PHP</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Laravel</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">MySQL</span>
-                        </div>
-                        <a href="https://hotel.bari-code.com" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-brand-blue text-white rounded-xl font-medium hover:bg-brand-blue/90 transition-all text-sm shadow-lg shadow-brand-blue/20">
-                            🚀 Ir al Sitio
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Turnero -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover-lift border border-gray-100">
-                    <div class="relative h-56 bg-gradient-to-br from-cyan-500 to-blue-600 overflow-hidden">
-                        <div class="absolute inset-0 bg-grid-white/10"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-7xl group-hover:scale-110 transition-transform duration-300">📅</span>
-                        </div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-medium">Agenda & Turnos</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Turnero</h3>
-                        <p class="text-gray-600 mb-4 h-24 text-sm leading-relaxed">Plataforma SaaS para reserva y administración de turnos online en tiempo real. Diseñada para profesionales independientes y consultorios con recordatorios automáticos.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">React</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">Node.js</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-blue text-xs rounded-full font-medium">MariaDB</span>
-                        </div>
-                        <a href="https://turnero.bari-code.com" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-brand-blue text-white rounded-xl font-medium hover:bg-brand-blue/90 transition-all text-sm shadow-lg shadow-brand-blue/20">
-                            🚀 Ir al Sitio
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Más Servicios Section -->
+    <!-- SECTION 6: Services (8 Servicios Optimizados) -->
     <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-purple-100 text-purple-700 font-medium text-sm rounded-full mb-4">Servicios</span>
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Más Servicios</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Complementamos el desarrollo de software con servicios de consultoría tecnológica.</p>
+                <span class="inline-block px-4 py-1.5 bg-purple-50 text-purple-700 font-bold text-xs uppercase tracking-wider rounded-full mb-3 border border-purple-200" data-i18n="services_tag">
+                    Nuestras Soluciones
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-950 mb-4 tracking-tight" data-i18n="services_title">
+                    Servicios de Software e Inteligencia Artificial
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto font-normal" data-i18n="services_subtitle">
+                    Desarrollamos soluciones tecnológicas robustas orientadas a generar retorno de inversión y eficiencia operativa.
+                </p>
             </div>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Bot con IA -->
-                <div class="group bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 border border-purple-200 hover-lift">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 text-2xl">
-                        🤖
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Bots con IA</h3>
-                    <p class="text-gray-600 text-sm">Automatización de procesos, atención al cliente 24/7 y chatbots inteligentes para tu empresa.</p>
-                </div>
                 
-                <!-- Asesoramiento IA -->
-                <div class="group bg-gradient-to-br from-blue-50 to-cyan-100 rounded-3xl p-6 border border-blue-200 hover-lift">
-                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 text-2xl">
-                        💡
+                <!-- Service 1 -->
+                <a href="servicios/software-a-medida.html" class="group bg-gradient-to-br from-blue-50/70 to-slate-50 rounded-3xl p-6 border border-blue-100/80 hover:border-brand-blue shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-brand-blue text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            💻
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-brand-blue transition" data-i18n="srv1_title">Desarrollo de Software a Medida</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv1_desc">Sistemas empresariales diseñados desde cero para digitalizar procesos complejos y centralizar tu operación.</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Asesoramiento IA</h3>
-                    <p class="text-gray-600 text-sm">Consultoría para implementar herramientas de IA profesional en tus procesos de negocio.</p>
+                    <span class="text-brand-blue text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="servicios/aplicaciones-web.html" class="group bg-gradient-to-br from-cyan-50/70 to-slate-50 rounded-3xl p-6 border border-cyan-100/80 hover:border-brand-cyan shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-brand-cyan text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            🌐
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-brand-cyan transition" data-i18n="srv2_title">Aplicaciones Web de Alto Rendimiento</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv2_desc">Plataformas SaaS, portales de clientes y paneles administrativos rápidos, seguros y responsivos.</p>
+                    </div>
+                    <span class="text-brand-cyan text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="servicios/aplicaciones-mobile.html" class="group bg-gradient-to-br from-indigo-50/70 to-slate-50 rounded-3xl p-6 border border-indigo-100/80 hover:border-indigo-600 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            📱
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-indigo-600 transition" data-i18n="srv3_title">Aplicaciones Mobile (iOS & Android)</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv3_desc">Apps nativas e híbridas diseñadas para brindar una experiencia impecable a usuarios y colaboradores.</p>
+                    </div>
+                    <span class="text-indigo-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="servicios/automatizacion-ia.html" class="group bg-gradient-to-br from-purple-50/70 to-slate-50 rounded-3xl p-6 border border-purple-100/80 hover:border-purple-600 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            ⚡
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-purple-600 transition" data-i18n="srv4_title">Automatización de Procesos con IA</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv4_desc">Optimización de flujos de trabajo repetitivos y procesamiento inteligente de datos para ahorrar cientos de horas.</p>
+                    </div>
+                    <span class="text-purple-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 5 -->
+                <a href="servicios/chatbots-ia.html" class="group bg-gradient-to-br from-pink-50/70 to-slate-50 rounded-3xl p-6 border border-pink-100/80 hover:border-pink-600 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-pink-600 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            🤖
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-pink-600 transition" data-i18n="srv5_title">Chatbots & Asistentes con IA</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv5_desc">Agentes conversacionales inteligentes entrenados con el conocimiento de tu empresa para atención y ventas 24/7.</p>
+                    </div>
+                    <span class="text-pink-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 6 -->
+                <a href="servicios/integracion-apis.html" class="group bg-gradient-to-br from-amber-50/70 to-slate-50 rounded-3xl p-6 border border-amber-100/80 hover:border-amber-600 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-amber-600 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            🔌
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-amber-600 transition" data-i18n="srv6_title">Integración de APIs y Sistemas</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv6_desc">Conectamos tu software con ERPs, CRMs, pasarelas de pago, facturación electrónica y servicios en la nube.</p>
+                    </div>
+                    <span class="text-amber-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 7 -->
+                <a href="servicios/infraestructura-cloud.html" class="group bg-gradient-to-br from-slate-100/70 to-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-slate-800 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-slate-800 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            ☁️
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-slate-800 transition" data-i18n="srv7_title">Infraestructura Cloud & DevOps</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv7_desc">Despliegue seguro en la nube (AWS/GCP/DigitalOcean), escalabilidad, monitoreo y copias de seguridad.</p>
+                    </div>
+                    <span class="text-slate-800 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+                <!-- Service 8 -->
+                <a href="servicios/consultoria-tecnologica.html" class="group bg-gradient-to-br from-emerald-50/70 to-slate-50 rounded-3xl p-6 border border-emerald-100/80 hover:border-emerald-600 shadow-sm hover:shadow-xl hover-lift transition block flex flex-col justify-between">
+                    <div>
+                        <div class="w-13 h-13 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-5 text-2xl shadow-md p-3">
+                            💡
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-950 mb-2 group-hover:text-emerald-600 transition" data-i18n="srv8_title">Consultoría Tecnológica & Auditoría</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="srv8_desc">Asesoramiento estratégico para definir tu roadmap digital, seleccionar tecnologías y modernizar sistemas.</p>
+                    </div>
+                    <span class="text-emerald-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition" data-i18n="srv_view_more">Ver detalle del servicio →</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: International Banner / Nearshore Engineering -->
+    <section class="py-16 bg-gradient-to-r from-brand-navy via-slate-900 to-brand-dark text-white border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8">
+                    <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">
+                        <span>🌎</span>
+                        <span>Nearshore Software Engineering</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3" data-i18n="intl_title">
+                        Ingeniería de Software con Alcance Global
+                    </h3>
+                    <p class="text-gray-300 text-base leading-relaxed" data-i18n="intl_desc">
+                        Trabajamos de forma 100% remota con empresas de Argentina, Latinoamérica, Estados Unidos y España. Brindamos tarifas altamente competitivas, coincidencia de husos horarios (Nearshore) y comunicación en español e inglés.
+                    </p>
                 </div>
-                
-                <!-- Infraestructura -->
-                <div class="group bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-6 border border-slate-200 hover-lift">
-                    <div class="w-14 h-14 bg-gradient-to-br from-slate-600 to-slate-800 rounded-2xl flex items-center justify-center mb-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Infraestructura</h3>
-                    <p class="text-gray-600 text-sm">Gestión de servidores, cloud, seguridad y mantenimiento de sistemas.</p>
-                </div>
-                
-                <!-- Consultoría -->
-                <div class="group bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-3xl p-6 border border-emerald-200 hover-lift">
-                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Consultoría</h3>
-                    <p class="text-gray-600 text-sm">Análisis de procesos y soluciones tecnológicas a medida para tu empresa.</p>
+                <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                    <button type="button" data-open-booking data-origin="intl_banner" class="w-full text-center bg-gradient-to-r from-brand-blue to-brand-cyan text-white py-3.5 px-6 rounded-2xl font-bold shadow-lg hover-lift">
+                        <span data-i18n="hero_cta_primary">Agendar diagnóstico sin cargo</span>
+                    </button>
+                    <a href="mailto:ventas@bari-code.com" class="w-full text-center bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-2xl font-semibold border border-white/20 transition text-sm">
+                        ✉️ ventas@bari-code.com
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-brand-blue to-brand-cyan relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    <!-- SECTION 8: Mid-page Conversion CTA -->
+    <section class="py-20 bg-gradient-to-r from-brand-blue via-blue-600 to-brand-cyan relative overflow-hidden text-white">
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-0 left-0 w-80 h-80 bg-white rounded-full blur-3xl"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
         
-        <div class="max-w-4xl mx-auto px-4 text-center relative">
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">¿Listo para crear algo increíble?</h2>
-            <p class="text-xl text-white/80 mb-8">Contanos sobre tu proyecto y te enviamos una cotización en 24 horas.</p>
-            <a href="#contact" class="inline-flex items-center gap-2 bg-white text-brand-blue px-10 py-5 rounded-full font-bold text-lg hover-lift shadow-xl">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                Solicitar Cotización
-            </a>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-5 leading-tight" data-i18n="mid_cta_title">
+                ¿Tenés un proyecto en mente o querés mejorar tu software actual?
+            </h2>
+            <p class="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n="mid_cta_desc">
+                Agendá una llamada de diagnóstico de 20 a 30 minutos con nuestros especialistas técnicos. Te orientamos sobre alcance, viabilidad y presupuesto.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button type="button" data-open-booking data-origin="mid_cta_button" class="inline-flex items-center justify-center gap-2 bg-white text-brand-blue px-9 py-4 rounded-2xl font-extrabold text-base hover-lift shadow-2xl">
+                    <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span data-i18n="mid_cta_btn">Reservar Diagnóstico Gratuito</span>
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-brand-dark relative">
-        <div class="absolute inset-0 opacity-20">
+    <!-- SECTION 9: Contact & Direct Channels (Optimizado Internacional) -->
+    <section id="contact" class="py-24 bg-brand-dark relative text-white">
+        <div class="absolute inset-0 opacity-15 pointer-events-none">
             <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-blue to-transparent"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-brand-blue/20 text-brand-cyan font-medium text-sm rounded-full mb-4">Contacto</span>
-                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Hablemos de tu Proyecto</h2>
-                <p class="text-xl text-gray-400">Respondemos en menos de 24 horas</p>
+                <span class="inline-block px-4 py-1.5 bg-brand-blue/20 text-brand-cyan font-bold text-xs uppercase tracking-wider rounded-full mb-3 border border-brand-cyan/30" data-i18n="contact_tag">
+                    Contacto
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight" data-i18n="contact_title">
+                    Hablemos de tu Proyecto
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-normal" data-i18n="contact_subtitle">
+                    Analizamos tu necesidad y te presentamos una propuesta clara y sin compromiso.
+                </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Leadership, Direct Channels & Reassurance -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <h3 class="text-xl font-bold text-white" data-i18n="contact_directors_title">Liderazgo y Contacto Directo</h3>
+                            <span class="text-xs text-brand-cyan bg-brand-cyan/10 px-2.5 py-1 rounded-full border border-brand-cyan/30 font-medium" data-i18n="contact_remote_badge">Arg & Internacional</span>
+                        </div>
                         
-                        <!-- Socios / Equipo Directivo -->
+                        <!-- Leadership Cards -->
                         <div class="grid sm:grid-cols-2 gap-3.5 mb-6">
-                            <div class="flex items-center gap-3 p-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition group h-full">
-                                <div class="relative w-[52px] h-[52px] flex-shrink-0">
-                                    <img src="nicolas.png" alt="Nicolas Sammarco" class="w-[52px] h-[52px] rounded-2xl object-cover bg-white ring-2 ring-brand-cyan/30 shadow-md group-hover:ring-brand-cyan/70 transition">
+                            <!-- Nicolas Sammarco -->
+                            <div class="flex items-center gap-3 p-3.5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition group">
+                                <div class="relative w-13 h-13 flex-shrink-0">
+                                    <img src="nicolas.png" alt="Nicolas Sammarco - CEO Bari Code" class="w-12 h-12 rounded-2xl object-cover bg-white ring-2 ring-brand-cyan/30 shadow-md group-hover:ring-brand-cyan/70 transition">
                                 </div>
                                 <div class="min-w-0 flex-1">
-                                    <p class="text-brand-cyan text-[11px] font-semibold uppercase tracking-wider">CEO & Fundador</p>
-                                    <p class="text-white font-bold text-base leading-snug">Nicolas Sammarco</p>
-                                    <a href="mailto:nicolas-sammarco@bari-code.com" class="text-gray-400 text-[10.5px] sm:text-[11px] hover:text-brand-cyan transition block tracking-tight mt-0.5 whitespace-nowrap">nicolas-sammarco@bari-code.com</a>
+                                    <p class="text-brand-cyan text-[10px] font-bold uppercase tracking-wider">CEO & Fundador</p>
+                                    <p class="text-white font-bold text-sm leading-snug">Nicolas Sammarco</p>
+                                    <a href="mailto:nicolas-sammarco@bari-code.com" class="text-gray-400 text-[10.5px] hover:text-brand-cyan transition block truncate">nicolas-sammarco@bari-code.com</a>
                                 </div>
                             </div>
 
-                            <div class="flex items-center gap-3 p-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition group h-full">
-                                <div class="relative w-[52px] h-[52px] flex-shrink-0">
-                                    <img src="sebastian.png" alt="Sebastian Scheel" class="w-[52px] h-[52px] rounded-2xl object-cover bg-white ring-2 ring-brand-cyan/30 shadow-md group-hover:ring-brand-cyan/70 transition">
+                            <!-- Sebastian Scheel -->
+                            <div class="flex items-center gap-3 p-3.5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition group">
+                                <div class="relative w-13 h-13 flex-shrink-0">
+                                    <img src="sebastian.png" alt="Sebastian Scheel - Socio Bari Code" class="w-12 h-12 rounded-2xl object-cover bg-white ring-2 ring-brand-cyan/30 shadow-md group-hover:ring-brand-cyan/70 transition">
                                 </div>
                                 <div class="min-w-0 flex-1">
-                                    <p class="text-brand-cyan text-[11px] font-semibold uppercase tracking-wider">Socio & Desarrollador</p>
-                                    <p class="text-white font-bold text-base leading-snug">Sebastian Scheel</p>
-                                    <a href="mailto:s-scheel@bari-code.com" class="text-gray-400 text-[10.5px] sm:text-[11px] hover:text-brand-cyan transition block tracking-tight mt-0.5 whitespace-nowrap">s-scheel@bari-code.com</a>
+                                    <p class="text-brand-cyan text-[10px] font-bold uppercase tracking-wider">Socio & Desarrollador</p>
+                                    <p class="text-white font-bold text-sm leading-snug">Sebastian Scheel</p>
+                                    <a href="mailto:s-scheel@bari-code.com" class="text-gray-400 text-[10.5px] hover:text-brand-cyan transition block truncate">s-scheel@bari-code.com</a>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Canales de contacto -->
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4 p-3.5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition">
-                                <div class="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        <!-- Direct Communication Channels -->
+                        <div class="space-y-3">
+                            <a href="https://wa.me/542944317769" target="_blank" data-origin="contact_section_whatsapp" class="flex items-center gap-4 p-4 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-2xl border border-emerald-500/30 transition group">
+                                <div class="w-11 h-11 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 text-xs uppercase font-medium">Email</p>
-                                    <div class="flex flex-wrap items-center gap-x-2 text-white font-semibold text-base">
+                                    <p class="text-xs uppercase font-semibold text-emerald-400">WhatsApp Directo</p>
+                                    <p class="text-white font-bold text-sm group-hover:text-emerald-300 transition">+54 2944 317769</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+                                <div class="w-11 h-11 bg-brand-blue/20 text-brand-cyan rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-xs uppercase font-semibold text-gray-400">Emails Comerciales</p>
+                                    <div class="flex flex-wrap items-center gap-x-2 text-white text-sm font-semibold">
                                         <a href="mailto:info@bari-code.com" class="hover:text-brand-cyan transition">info@bari-code.com</a>
-                                        <span class="text-gray-500 font-normal">/</span>
+                                        <span class="text-gray-500">/</span>
                                         <a href="mailto:ventas@bari-code.com" class="hover:text-brand-cyan transition">ventas@bari-code.com</a>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="flex items-center gap-4 p-3.5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-brand-cyan/40 transition">
-                                <div class="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+
+                            <button type="button" data-open-booking data-origin="contact_call_card" class="w-full flex items-center gap-4 p-4 bg-blue-600/15 hover:bg-blue-600/25 rounded-2xl border border-blue-500/30 transition text-left group">
+                                <div class="w-11 h-11 bg-brand-blue text-white rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 text-xs uppercase font-medium">WhatsApp</p>
-                                    <a href="https://wa.me/542944317769" class="text-white font-semibold text-base hover:text-brand-cyan transition">+54 2944 317769</a>
+                                    <p class="text-xs uppercase font-semibold text-brand-cyan">Videollamada de 20-30 min</p>
+                                    <p class="text-white font-bold text-sm group-hover:text-brand-cyan transition" data-i18n="contact_btn_calendar">Agendar Videollamada (Meet / Cal)</p>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
-                        <p class="text-gray-300 mb-4">¿Por qué elegirnos?</p>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <svg class="w-5 h-5 text-brand-cyan flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                <span>Experiencia comprobada</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <svg class="w-5 h-5 text-brand-cyan flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                <span>Metodología ágil</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300">
-                                <svg class="w-5 h-5 text-brand-cyan flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                <span>Soporte post-lanzamiento</span>
-                            </div>
+                    <!-- Why Choose Us Mini Card -->
+                    <div class="bg-white/5 rounded-3xl p-6 border border-white/10 text-xs text-gray-300 space-y-2.5">
+                        <div class="flex items-center gap-2 text-white font-bold text-sm">
+                            <span class="text-brand-cyan">✓</span>
+                            <span>Presupuesto y alcance técnico sin cargo</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-cyan">✓</span>
+                            <span>Acuerdo de Confidencialidad (NDA) para proteger tu idea</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-cyan">✓</span>
+                            <span>Facturación y contratos adaptados a tu país</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur rounded-3xl p-8 border border-white/10">
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label class="block text-gray-300 text-sm font-medium mb-2">Nombre completo</label>
-                            <input type="text" id="nombre" placeholder="Juan Pérez" class="w-full px-5 py-4 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" placeholder="juan@empresa.com" class="w-full px-5 py-4 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm font-medium mb-2">Empresa (opcional)</label>
-                            <input type="text" id="empresa" placeholder="Tu empresa" class="w-full px-5 py-4 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition">
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm font-medium mb-2">¿En qué podemos ayudarte?</label>
-                            <textarea id="mensaje" placeholder="Contanos sobre tu proyecto, objetivos y necesidades..." rows="4" class="w-full px-5 py-4 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition resize-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-bold py-5 rounded-2xl hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Enviar por WhatsApp
-                        </button>
-                    </form>
+                <!-- Right: Advanced Multi-Channel Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white/5 backdrop-blur-md rounded-3xl p-7 sm:p-9 border border-white/10 shadow-2xl">
+                        <form id="contactForm" class="space-y-4">
+                            
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_name">Nombre completo *</label>
+                                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_email">Email corporativo *</label>
+                                    <input type="email" id="email" required placeholder="juan@empresa.com" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_phone">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="telefono" required placeholder="+54 9 11..." class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_country">País *</label>
+                                    <select id="paisSelect" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/20 text-white focus:outline-none focus:border-brand-cyan transition text-sm">
+                                        <option value="AR" data-i18n="country_ar">Argentina 🇦🇷</option>
+                                        <option value="ES" data-i18n="country_es">España 🇪🇸</option>
+                                        <option value="US" data-i18n="country_us">Estados Unidos 🇺🇸</option>
+                                        <option value="MX" data-i18n="country_mx">México 🇲🇽</option>
+                                        <option value="CO" data-i18n="country_co">Colombia 🇨🇴</option>
+                                        <option value="CL" data-i18n="country_cl">Chile 🇨🇱</option>
+                                        <option value="UY" data-i18n="country_uy">Uruguay 🇺🇾</option>
+                                        <option value="PE" data-i18n="country_pe">Perú 🇵🇪</option>
+                                        <option value="OTHER" data-i18n="country_other">Otro país 🌎</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_service">¿Qué necesitás resolver? *</label>
+                                    <select id="servicioSelect" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/20 text-white focus:outline-none focus:border-brand-cyan transition text-sm">
+                                        <option value="opt_custom_software" data-i18n="opt_custom_software">Desarrollo de Software a Medida</option>
+                                        <option value="opt_web_app" data-i18n="opt_web_app">Aplicación Web / SaaS</option>
+                                        <option value="opt_mobile_app" data-i18n="opt_mobile_app">Aplicación Mobile (iOS/Android)</option>
+                                        <option value="opt_ai_automation" data-i18n="opt_ai_automation">Automatización de Procesos con IA</option>
+                                        <option value="opt_ai_chatbots" data-i18n="opt_ai_chatbots">Chatbots y Asistentes con IA</option>
+                                        <option value="opt_integrations" data-i18n="opt_integrations">Integración de APIs y Sistemas</option>
+                                        <option value="opt_cloud_devops" data-i18n="opt_cloud_devops">Infraestructura Cloud y Mantenimiento</option>
+                                        <option value="opt_consulting" data-i18n="opt_consulting">Consultoría Tecnológica & Diagnóstico</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-semibold mb-1.5">Empresa / Negocio (opcional)</label>
+                                    <input type="text" id="empresa" placeholder="Nombre de tu empresa" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-300 text-xs font-semibold mb-1.5" data-i18n="contact_form_msg">Contanos sobre tu necesidad, objetivos o desafíos *</label>
+                                <textarea id="mensaje" required placeholder="Explicá brevemente qué procesos querés automatizar o qué sistema te gustaría desarrollar..." rows="3" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan transition resize-none text-sm"></textarea>
+                            </div>
+
+                            <!-- Privacy check -->
+                            <div class="flex items-start gap-2.5 pt-1">
+                                <input type="checkbox" id="privacidadCheckbox" required checked class="mt-1 w-4 h-4 rounded text-brand-blue focus:ring-brand-cyan bg-slate-900 border-gray-700">
+                                <label for="privacidadCheckbox" class="text-gray-400 text-xs leading-tight" data-i18n="contact_form_privacy">
+                                    Acepto las políticas de privacidad y autorizo a Bari Code a contactarme para fines relacionados con esta consulta.
+                                </label>
+                            </div>
+
+                            <!-- Multi-Channel Actions: WhatsApp vs Email -->
+                            <div class="grid sm:grid-cols-2 gap-3 pt-3">
+                                <button type="button" id="btnSubmitWhatsapp" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-sm">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                    <span data-i18n="contact_btn_whatsapp">Enviar por WhatsApp</span>
+                                </button>
+
+                                <button type="button" id="btnSubmitEmail" class="w-full bg-brand-blue hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-sm">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <span data-i18n="contact_btn_email">Enviar por Email</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark py-10 border-t border-white/10">
+    <footer class="bg-black py-12 border-t border-white/10 text-white text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Baricode" class="h-10 w-auto bg-white rounded-lg p-1">
+                
+                <div class="flex items-center gap-4">
+                    <img src="logo.png" alt="Bari Code" class="h-9 w-auto bg-white rounded-lg p-1">
+                    <div>
+                        <p class="font-bold text-sm text-gray-200">Bari Code</p>
+                        <p class="text-gray-400">Custom Software & AI Solutions</p>
+                    </div>
                 </div>
-                <p class="text-gray-400">&copy; 2026 Baricode. Todos los derechos reservados.</p>
-                <div class="flex gap-4">
-                    <a href="https://wa.me/542944317769" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+
+                <div class="flex flex-wrap justify-center gap-6 text-gray-400">
+                    <a href="#about" class="hover:text-white transition" data-i18n="nav_about">Nosotros</a>
+                    <a href="#demos" class="hover:text-white transition" data-i18n="nav_cases">Casos de Éxito</a>
+                    <a href="#services" class="hover:text-white transition" data-i18n="nav_services">Servicios</a>
+                    <a href="#contact" class="hover:text-white transition" data-i18n="nav_contact">Contacto</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/542944317769" target="_blank" data-origin="footer_whatsapp" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition" aria-label="WhatsApp">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>
                     </a>
-                    <a href="mailto:info@bari-code.com" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
-                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="mailto:info@bari-code.com" data-origin="footer_email" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-blue transition" aria-label="Email">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </a>
                 </div>
             </div>
+
+            <div class="mt-8 pt-8 border-t border-white/5 text-center text-gray-500 text-[11px]">
+                <p>&copy; 2026 Bari Code. <span data-i18n="footer_rights">Todos los derechos reservados. San Carlos de Bariloche, Argentina.</span></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/542944317769" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 animate-pulse-slow">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/542944317769" target="_blank" data-origin="floating_button" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 bg-emerald-500 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all duration-300 z-50 animate-bounce">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-<script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offset = 80;
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
+    <!-- MODAL 1: Case Study Full Breakdown (Problema, Solución, Resultados, Stack) -->
+    <div id="caseStudyModal" class="modal-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100">
+            <div class="relative p-6 sm:p-8">
+                <!-- Close Button -->
+                <button type="button" data-modal-close class="absolute top-6 right-6 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition" aria-label="Cerrar modal">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const empresa = document.getElementById('empresa').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            const telefono = '542944317769';
-            const texto = `Hola! Soy *${nombre}*%0A%0A📧 *Email:* ${email}%0A🏢 *Empresa:* ${empresa || 'No especificada'}%0A%0A💬 *Mensaje:* ${mensaje}`;
-            
-            const url = `https://wa.me/${telefono}?text=${texto}`;
-            
-            window.open(url, '_blank');
-        });
-    </script>
+                <!-- Header -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div id="caseModalIcon" class="w-14 h-14 rounded-2xl bg-brand-light flex items-center justify-center text-3xl shadow-sm">
+                        🐾
+                    </div>
+                    <div>
+                        <span id="caseModalBadge" class="text-xs font-bold text-brand-blue uppercase tracking-wider">Industria</span>
+                        <h3 id="caseModalTitle" class="text-2xl sm:text-3xl font-extrabold text-gray-950">Nombre Proyecto</h3>
+                        <p id="caseModalClient" class="text-xs text-gray-500 font-medium">Tipo de cliente</p>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">Resultados Concretos & Beneficios</h4>
+                    <div id="caseModalResults" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Problem vs Solution -->
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-red-50/70 border border-red-100 rounded-2xl p-5">
+                        <div class="flex items-center gap-2 text-red-700 font-bold text-sm mb-2">
+                            <span>⚠️</span>
+                            <span>Problema Inicial</span>
+                        </div>
+                        <p id="caseModalProblem" class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+                            Descripción del problema...
+                        </p>
+                    </div>
+
+                    <div class="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-5">
+                        <div class="flex items-center gap-2 text-emerald-700 font-bold text-sm mb-2">
+                            <span>💡</span>
+                            <span>Solución Desarrollada por Bari Code</span>
+                        </div>
+                        <p id="caseModalSolution" class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+                            Descripción de la solución...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="mb-8">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">Stack Tecnológico Utilizado</h4>
+                    <div id="caseModalStack" class="flex flex-wrap gap-2">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Footer Actions -->
+                <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
+                    <button type="button" id="caseModalCtaSimilar" class="flex-1 py-4 px-6 bg-gradient-to-r from-brand-blue to-brand-cyan text-white rounded-2xl font-bold hover-lift glow-btn text-sm flex items-center justify-center gap-2 shadow-lg">
+                        <span data-i18n="case_btn_similar">Quiero una solución similar</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+                    
+                    <a id="caseModalDemoBtn" href="#" class="py-4 px-6 bg-slate-900 text-white rounded-2xl font-bold text-sm hover:bg-slate-800 transition text-center hidden">
+                        📊 Demo & Pitch
+                    </a>
+
+                    <a id="caseModalExternalSite" href="#" target="_blank" rel="noopener noreferrer" class="py-4 px-6 bg-gray-100 text-gray-800 rounded-2xl font-bold text-sm hover:bg-gray-200 transition text-center hidden">
+                        🚀 Ver Sitio en Vivo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Discovery Call Booking (Diagnóstico sin cargo de 20-30 min) -->
+    <div id="bookingModal" class="modal-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100">
+            <div class="relative p-6 sm:p-8">
+                <!-- Close Button -->
+                <button type="button" data-booking-close class="absolute top-6 right-6 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition" aria-label="Cerrar modal">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+
+                <div id="bookingFormContainer">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">📅</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-gray-950" data-i18n="modal_call_title">Agendar Diagnóstico Gratuito (20-30 min)</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-6" data-i18n="modal_call_subtitle">
+                        Elegí el horario o completá tus datos para coordinar una sesión estratégica por Google Meet con nuestro equipo.
+                    </p>
+
+                    <form id="bookingForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-xs font-bold mb-1" data-i18n="contact_form_name">Nombre completo *</label>
+                            <input type="text" id="bookName" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-gray-700 text-xs font-bold mb-1" data-i18n="contact_form_email">Email corporativo *</label>
+                                <input type="email" id="bookEmail" required placeholder="nombre@empresa.com" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-xs font-bold mb-1">Empresa</label>
+                                <input type="text" id="bookCompany" placeholder="Tu empresa" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-gray-700 text-xs font-bold mb-1">Fecha tentativa preferida</label>
+                                <input type="date" id="bookDate" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-xs font-bold mb-1">Franja horaria</label>
+                                <select id="bookTimeSlot" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                                    <option value="Mañana (09:00 - 13:00 ART / CET)">Mañana (09:00 - 13:00 ART)</option>
+                                    <option value="Tarde (14:00 - 18:00 ART / EST)">Tarde (14:00 - 18:00 ART)</option>
+                                    <option value="Cualquier horario / Asincrónico">Horario Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-xs font-bold mb-1">Tema a tratar</label>
+                            <input type="text" id="bookTopic" placeholder="Ej: Automatizar atención con IA o Crear nuevo CRM" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-blue text-sm">
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-blue via-blue-600 to-brand-cyan text-white rounded-xl font-bold hover-lift glow-btn shadow-lg text-sm flex items-center justify-center gap-2">
+                            <span>🚀 Confirmar y Coordinar por WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Success Confirmation State inside modal -->
+                <div id="bookingSuccessContainer" class="hidden text-center py-6">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl mb-4">
+                        ✓
+                    </div>
+                    <h4 class="text-2xl font-extrabold text-gray-900 mb-2">¡Solicitud Registrada!</h4>
+                    <p class="text-sm text-gray-600 mb-6 max-w-md mx-auto">
+                        Para recibir el enlace de Google Meet de inmediato, tocá el botón a continuación y abrí el chat con nuestro equipo.
+                    </p>
+                    <a id="bookingWaDirectLink" href="#" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-2xl shadow-xl hover-lift">
+                        <span>📲 Abrir WhatsApp y Confirmar</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Engine -->
+    <script src="js/i18n.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/case-modal.js"></script>
+    <script src="js/booking-modal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
