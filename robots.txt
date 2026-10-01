@@ -1,0 +1,6 @@
+# Robots.txt para Bari Code (https://bari-code.com)
+User-agent: *
+Allow: /
+
+# Ubicación del Sitemap XML
+Sitemap: https://bari-code.com/sitemap.xml
